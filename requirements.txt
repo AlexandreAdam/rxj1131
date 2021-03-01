@@ -1,6 +1,9 @@
 numpy
 tensorflow>=2.4
-astropy
+astropy==4.2
 matplotlib
 pandas
 jupyter
+photutils
+#reproject
+#montage_wrapper

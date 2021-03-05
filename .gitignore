@@ -131,3 +131,5 @@ dmypy.json
 
 *.dat
 *.fits
+galfit.*
+!galfit.feedme

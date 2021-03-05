@@ -6,5 +6,6 @@ pandas
 jupyter
 photutils
 lenstronomy
+pycs3
 #reproject
 #montage_wrapper

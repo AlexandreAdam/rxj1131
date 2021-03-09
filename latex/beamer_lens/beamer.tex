@@ -225,6 +225,7 @@ On considère la famille de profil elliptique à puissance radial adoucie:
         \item $\theta_E$: Rayon d'Einstein;
         \item $e$: Paramètre d'ellipticité;
         \item $\theta_c$: Rayon de troncation du profile.
+        \item $\gamma$: Pente logarithmique du profil (fixée à $\gamma=2$; profil NIE).
 \end{itemize}
 % NON!
 %Avantage: les angles de déflections et le potentiel de Fermat ont une forme analytique.
@@ -254,8 +255,39 @@ On considère la famille de profil elliptique à puissance radial adoucie:
         
 \end{frame}
 
+\begin{frame}{Prétraitement}{Décomposition de la lumière}
+        On ajuste un profil de 
+        Vaucouleur (profile de Sérsic\footnote{\citet{Sersic1963}} avec $n=4$)
+        sur la galaxie $G$ et on 
+        modélise $S$ par le PSF avec \texttt{GalFit}\footnote{\citet{Peng2002}}. Finalement, 
+        on soustrait le ciel noir pour obtenir l'image résiuduelle:
+        \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.4\textwidth]{residual}
+        \end{figure}
+        
+\end{frame}
 
-\subsection{Reconstruction des paramètres de la lentille}
+
+\subsection{Inférence}
+
+\begin{frame}{Inférence}{Likelihood}
+        On cherche la solution qui maximise la distribution postérieur. Le 
+        \textit{likelihood} des données de lentilles est:
+        \begin{align}\label{eq:Likelihood} 
+                \log P(\underbrace{\mathbf{d_{\text{ACS}}}}_{\mathcal{D}}\mid 
+                \underbrace{\theta_E, e, \theta_c, \boldsymbol{ \eta}}_{\mathcal{M}} )  
+        &= -\frac{1}{2}\sum_{i=1}^{N_d} \frac{(d_{\text{ACS},i} 
+        - d_{\mathcal{M}, i})^2}{\sigma^2_i}
+        \\\nonumber
+        &\hspace{1cm}-\frac{1}{2}\sum_{i=1}^{3}\sum_{j=i+1}^{4} \frac{
+        (\boldsymbol{\beta}_i - \boldsymbol{\beta}_j  )^2}{(d\theta)^2} + C 
+        \end{align} 
+\begin{enumerate}
+        \item Premier terme: résiduel sur la structure étendue de la source;
+        \item Deuxième terme: on cherche une source ponctuelle pour les images de l'AGN. 
+\end{enumerate}
+\end{frame}
 
 
 \begin{frame}[allowframebreaks]{Références}

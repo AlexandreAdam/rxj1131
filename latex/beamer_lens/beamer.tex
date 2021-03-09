@@ -196,7 +196,7 @@ surface projeté sur le plan de la lentille
 \end{minipage}
 ~
 \begin{minipage}{0.5\textwidth}
-L'image lentillée est obtenu via l'équationde la lentille:
+L'image lentillée est obtenu via l'équation de la lentille:
 \begin{equation}\label{eq:Lens Eq} 
         \boldsymbol{\beta} = \boldsymbol{\theta} - \boldsymbol{ \alpha}(\boldsymbol{ \theta} ) 
 \end{equation} 
@@ -212,7 +212,23 @@ L'image lentillée est obtenu via l'équationde la lentille:
 \end{minipage}
 \end{frame}
 
-\subsection{Modèle pour le potentiel de Fermat}
+\subsection{Modélisation de $\kappa(\boldsymbol{ \theta} )$}
+\begin{frame}{Modélisation de $\kappa(\boldsymbol{ \theta} )$}
+On considère la famille de profil elliptique à puissance radial adoucie:
+\footnote{\citet{Barkana1998}}$^{,}$\footnote{\citet{Suyu2013}}$^{,}$\footnote{\citet{Keeton2001}}
+\begin{equation}\label{eq:Kappa} 
+        \kappa(\theta_1, \theta_2) = \frac{3 - \gamma}{2} 
+        \left( \frac{\theta_E}{\sqrt{\dfrac{\theta_1^2}{1 - e} + \theta_2^2(1-e) + 
+        \theta_c^2}} \right)^{\gamma-1}
+\end{equation} 
+\begin{itemize}
+        \item $\theta_E$: Rayon d'Einstein;
+        \item $e$: Paramètre d'ellipticité;
+        \item $\theta_c$: Rayon de troncation du profile.
+\end{itemize}
+% NON!
+%Avantage: les angles de déflections et le potentiel de Fermat ont une forme analytique.
+\end{frame}
 
 \section{RXJ1131-1231}
 \begin{frame}

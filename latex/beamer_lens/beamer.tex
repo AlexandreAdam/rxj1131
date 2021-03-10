@@ -149,7 +149,7 @@
          
 \end{frame}
 
-\section{Méthode}
+\section{Théorie}
 \subsection{Équation du délai temporel}
 \begin{frame}{Équation du délai temporel}
 	\begin{equation}\label{eq:DelaiTemp} 
@@ -276,7 +276,8 @@ On considère la famille de profil elliptique à puissance radial adoucie:
         \textit{likelihood} des données de lentilles est:
         \begin{align}\label{eq:Likelihood} 
                 \log P(\underbrace{\mathbf{d_{\text{ACS}}}}_{\mathcal{D}}\mid 
-                \underbrace{\theta_E, e, \theta_c, \boldsymbol{ \eta}}_{\mathcal{M}} )  
+                \underbrace{\theta_E, e, \theta_c, \boldsymbol{ \eta}, \mathbf{s}
+                }_{\mathcal{M}} )  
         &= -\frac{1}{2}\sum_{i=1}^{N_d} \frac{(d_{\text{ACS},i} 
         - d_{\mathcal{M}, i})^2}{\sigma^2_i}
         \\\nonumber
@@ -285,8 +286,23 @@ On considère la famille de profil elliptique à puissance radial adoucie:
         \end{align} 
 \begin{enumerate}
         \item Premier terme: résiduel sur la structure étendue de la source;
-        \item Deuxième terme: on cherche une source ponctuelle pour les images de l'AGN. 
+        \item Deuxième terme: source ponctuelle pour les images de l'AGN. 
 \end{enumerate}
+On ne considère que le second terme pour la suite. Premier terme rend l'inférence difficile.
+\citet{Suyu2013} adoptent une inversion régularisée non-paramétrique pour ce terme.
+\end{frame}
+
+\begin{frame}{Inférence}{\textit{Dynamic Nested Sampling}
+        \footnote{\citet{Skilling2006}}$^{,}$\footnote{\citet{Higson2017}}}
+        \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.5\textwidth]{corner_plot}
+        \end{figure}
+         
+\end{frame}
+
+\begin{frame}{Inférence}{Inférence jointe}
+        
 \end{frame}
 
 

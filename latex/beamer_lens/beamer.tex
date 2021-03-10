@@ -302,6 +302,41 @@ On ne considère que le second terme pour la suite. Premier terme rend l'infére
 \end{frame}
 
 \begin{frame}{Inférence}{Inférence jointe}
+        On combine l'analyse de la lentille avec le \textit{likelihood} du délai 
+        temporel
+        \begin{align}\label{eq:LikTimeDelay}
+                \log P(\boldsymbol{ \Delta}\mathbf{t} \mid D_{\Delta t}, \mathcal{M}) 
+                &= -\frac{1}{2}\sum_i \left( \frac{\Delta t_i -
+                \Delta t(D_{\Delta t}, \mathcal{M})_i}{\sigma_{\Delta t}} \right)^2  \\\nonumber
+                &\hspace{1cm}
+                + \log P(\mathbf{d}_{ACS} \mid \mathcal{M}) + C
+        \end{align} 
+        On modélise la distribution postérieur par avec \texttt{MCMC} 
+        et une distribution 
+        \textit{prior} uniforme. Nos chaînes sont générés à partir 
+        de la distribution postérieur des paramètres de lentilles.
+        
+\end{frame}
+
+\begin{frame}{Inférence}{Distribution postérieur marginale}
+        \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.5\textwidth]{marginalized_posterior_Ddt}
+        \end{figure}
+        Résultat préliminaire en assumant $\Lambda$CDM plat $\boxed{100h = 71^{+22}_{-14}}$.
+\end{frame}
+
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+        Travail à faire pour réduire l'incertitude!
+        \begin{itemize}
+                \item Modéliser le \textit{cisaillment} (shear) extrinsèque $\gamma_{\text{ext}}$;
+                \item Modéliser la convergence extrinsèque $\kappa_{\text{ext}}$;
+                \item Contraindre le modèle avec $\mathbf{d}_{\text{ACS}}$;
+                \item Modéliser l'extinction avec une deuxième couleur;
+                \item Résoudre la dégénérescence entre $D_{\Delta t}$ et $\kappa_{\text{ext}}$.
+        \end{itemize}
         
 \end{frame}
 

@@ -149,3 +149,4 @@ galfit.*
 *.blg
 *.aux
 *.snm
+*.p

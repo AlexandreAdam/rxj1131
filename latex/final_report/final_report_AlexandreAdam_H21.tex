@@ -66,6 +66,10 @@
 \usepackage{float}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{makecell}
 
 
 \renewcommand\thesubsection{\alph{subsection})}
@@ -95,7 +99,6 @@ Département de physique \\ Université de Montréal
 \date{\today}
 
 \begin{document}
-
 \twocolumn[
 \maketitle
 \begin{onecolabstract} % 10 points
@@ -105,8 +108,9 @@ Département de physique \\ Université de Montréal
 
 \section{Introduction}\label{sec:intro}
 \begin{equation}\label{eq:TimeDelay} 
-        c\Delta t_{ij} = D_{\Delta t} \left( \frac{(\theta_i - \beta)^2}{2} - \frac{(\theta_j - \beta)^{2}}{2}
-        - \psi(\theta_i) + \phi(\theta_j)\right)
+        c\Delta t_{ij} = D_{\Delta t} \left( \frac{(\boldsymbol{\theta_i} - \boldsymbol{\beta})^2}{2} - 
+                \frac{(\boldsymbol{\theta_j} - \boldsymbol{\beta})^{2}}{2}
+        - \psi(\boldsymbol{\theta_i}) + \phi(\boldsymbol{\theta_j})\right)
 \end{equation} 
 
 \begin{equation}\label{eq:Ddt} 
@@ -148,6 +152,22 @@ Département de physique \\ Université de Montréal
 \right)^{n- 1} 
 \end{equation} 
 \section{Méthodologie}\label{sec:metho}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{good_cutout}
+        \caption{}
+        \label{fig:rxj1131}
+\end{figure}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{psf_cutout}
+        \caption{}
+        \label{fig:psf}
+\end{figure}
+
+
+
 \begin{align}
         \nonumber
         \log P(\underbrace{\mathbf{d}_{\mathrm{ACS}}}_{\mathcal{D}}
@@ -165,7 +185,39 @@ Département de physique \\ Université de Montréal
         \\\label{eq:JointLikelihood}
         &+\log P(\mathbf{d}_{ACS} | \mathcal{M})
 \end{align}
+
 \section{Résultats et discussion}\label{sec:resultats}
+\begin{figure*}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{corner_plot_joint}
+        \caption{}
+        \label{fig:cornerplot}
+\end{figure*}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{marginalized_posterior_H0}
+        \caption{}
+        \label{fig:}
+\end{figure}
+
+\begin{table}[H]
+        \centering
+        \caption{Positions relatives des 4 images du quasar}
+        \begin{tabular}{ccc}
+                \toprule
+                \thead{Images} & \thead{$\theta_1$\\ ($''$)} & \thead{$\theta_2$ \\ ($''$)} \\
+                \midrule
+                A & 1.8998 & 0.5659 \\\midrule
+                B & 1.8717 & -0.6207 \\\midrule
+                C & 1.2654 & -1.7385 \\\midrule
+                D & -1.3217 & 0.2568 \\
+                \bottomrule
+        \end{tabular}
+        \label{tab:}
+\end{table}
+
+
 \section{Conclusion}\label{sec:conclusion}
 
 \printbibliography

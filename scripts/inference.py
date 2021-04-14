@@ -82,7 +82,7 @@ class QuadPseudoNIELensModel:
     plate_scale: Plate scale of the image, used as uncertainty for
         likelihood
     """
-    def __init__(self, x_image, y_image, plate_scale, kappa_ext=0, theta_c=0.1,
+    def __init__(self, x_image, y_image, plate_scale, kappa_ext=0, theta_c=0,
             prior=None):
         self.theta1 = x_image
         self.theta2 = y_image

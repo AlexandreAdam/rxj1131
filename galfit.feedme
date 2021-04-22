@@ -33,7 +33,7 @@ P) 0                  # Choose: 0=optimize, 1=model, 2=imgblock, 3=subcomps
 
 ## Object number: 1
  0) sersic                 #  object type
- 1) 99  99    1 1          #  position x, y
+ 1) 87  86    1 1          #  position x, y
  3) 10.9000     1          #  Integrated magnitude	
  4) 20.000      0          #  R_e (half-light radius)   [pix]
  5) 4.00         0          #  Sersic index n (de Vaucouleurs n=4) 
@@ -43,7 +43,7 @@ P) 0                  # Choose: 0=optimize, 1=model, 2=imgblock, 3=subcomps
 
 # Object number: small galaxy
  0) psf                 #  object type
- 1) 98  114     1 1           #  position x, y
+ 1) 84  99     1 1           #  position x, y
  3) 19.0890      1          #  Integrated magnitude	
  Z) 0
  #4) 1           1          #  R_e (half-light radius)   [pix]

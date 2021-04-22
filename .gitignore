@@ -150,3 +150,5 @@ galfit.*
 *.aux
 *.snm
 *.p
+
+*.idea

@@ -42,10 +42,9 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 
-\usepackage[backend=biber, style=nature]{biblatex}
+\usepackage[backend=biber, style=nature, citestyle=authoryear]{biblatex}
 \addbibresource{bibfile.bib}
 
 \usepackage{amsmath}
@@ -53,11 +52,19 @@
 \usepackage{mathtools}
 \usepackage{amstext}
 \usepackage{amsthm}
+\usepackage{bbm}
 \usepackage{fancyhdr}
 \usepackage{siunitx}
 \usepackage{physics}
 
+\usepackage{xcolor}
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!90!black},
+    citecolor={blue!90!black},
+    urlcolor={blue!90!black}
+}
 
 
 \usepackage{graphicx}
@@ -72,8 +79,8 @@
 \usepackage{makecell}
 
 
-\renewcommand\thesubsection{\alph{subsection})}
-\renewcommand\thesubsubsection{\Roman{subsubsection}}
+%\renewcommand\thesubsection{\alph{subsection})}
+%\renewcommand\thesubsubsection{\Roman{subsubsection}}
 
 
 \newcommand{\angstrom}{\textup{\AA}}
@@ -107,51 +114,163 @@ Département de physique \\ Université de Montréal
 ]
 
 \section{Introduction}\label{sec:intro}
-\begin{equation}\label{eq:TimeDelay} 
-        c\Delta t_{ij} = D_{\Delta t} \left( \frac{(\boldsymbol{\theta_i} - \boldsymbol{\beta})^2}{2} - 
-                \frac{(\boldsymbol{\theta_j} - \boldsymbol{\beta})^{2}}{2}
-        - \psi(\boldsymbol{\theta_i}) + \phi(\boldsymbol{\theta_j})\right)
-\end{equation} 
+\section{Lentilles Gravitationnelles}\label{sec:lens}
+\subsection{Formalisme}
+Dans cette section, on révise la théorie des lentilles gravitationnelles. 
+Plus de détails peuvent être trouvés dans l'excellente revue de \cite{Treu2010}. \par
 
-\begin{equation}\label{eq:Ddt} 
-        D_{\Delta t} \equiv (1 + z_{\ell}) \frac{D_\ell D_s}{D_{\ell s}} \propto H_0^{-1}
-\end{equation} 
-\section{Théorie}\label{sec:theorie}
-
+Une distribution de matière projeté sur le plan normal à la ligne de visée d'un 
+observateur forme ce qu'on 
+appel un champ de convergence $\kappa(\boldsymbol{\theta})$, où $\boldsymbol{\theta}$ sont 
+les coordonnées angulaires du plan de la lentille. Ce champ génère un potentiel 
+effectif $\psi(\boldsymbol{\theta})$ lié à $\kappa$ via une équation de Poisson
 \begin{equation}\label{eq:Poisson} 
-        \grad^{2}_{\theta} \psi = 2 \kappa(\boldsymbol{\theta} )
+        \grad^{2}_{\boldsymbol{\theta}} \psi = 2 \kappa(\boldsymbol{\theta} ).
 \end{equation} 
+Cette équation est résolut en introduisant la fonction de Green appropriée
 
 \begin{equation}\label{eq:Potentiel} 
         \psi(\boldsymbol{ \theta}) = \frac{1}{\pi} \int_{\mathbb{R}^2} 
-        \kappa(\boldsymbol{ \theta}') \ln(\boldsymbol{\theta} - \boldsymbol{\theta}') d^2\boldsymbol{\theta}'
-\end{equation} 
-
+        \kappa(\boldsymbol{ \theta}') \ln(\boldsymbol{\theta} - \boldsymbol{\theta}') d^2\boldsymbol{\theta}'.
+\end{equation}
+Il est pratique de rendre adimensionnel les quantités d'intérêts:
 \begin{equation}\label{eq:Convergence} 
-        \kappa(\boldsymbol{\theta}) \equiv \frac{\Sigma(\boldsymbol{\theta})}{\Sigma_{\mathrm{cr}}}
+        \kappa(\boldsymbol{\theta}) \equiv \frac{\Sigma(\boldsymbol{\theta})}{\Sigma_{\mathrm{cr}}},
 \end{equation} 
-
+où on a introduit la densité de surface critique $\Sigma_{\mathrm{cr}}$
 \begin{equation}\label{eq:Sigcritique} 
-        \Sigma_{\mathrm{cr}} \equiv \frac{c^2}{4\pi G} \frac{D_s}{D_\ell D_{\ell s}}
-\end{equation} 
-
+        \Sigma_{\mathrm{cr}} \equiv \frac{c^2}{4\pi G} \frac{D_s}{D_\ell D_{\ell s}}.
+\end{equation}
+On distingue 3 distances de diamètres angulaires $D_s$, $D_\ell$ et $D_{\ell s}$, 
+soit la distance de l'observateur à la source, à la lentille et la distance 
+entre la lentille et la source respectivement. Ces distances préservent les relations 
+trigonométriques entre le plan source et le plan de la lentille, ce qui donne 
+lieu à l'\textit{équation de la lentille}:
 \begin{equation}\label{eq:LensEquation} 
-        \boldsymbol{\beta} = \boldsymbol{\theta} - \boldsymbol{\alpha}(\boldsymbol{\theta})
+        \boldsymbol{\beta} = \boldsymbol{\theta} - \boldsymbol{\alpha}(\boldsymbol{\theta}).
 \end{equation} 
-
-\begin{equation}\label{eq:DeflectinAngle} 
+$\boldsymbol{\beta}$ représente les coordonnées angulaire dans le plan de la lentille et 
+$\boldsymbol{\alpha}$ représente l'angle de deflection. Comme 
+$\boldsymbol{\alpha}(\boldsymbol{\theta}) = \grad_{\boldsymbol{\theta}} \psi$, alors
+\begin{equation}\label{eq:DeflectionAngle} 
         \boldsymbol{\alpha}(\boldsymbol{\theta}) = \frac{1}{\pi} \int_{\mathbb{R}^{2}} \kappa(\boldsymbol{\theta}')
         \frac{\boldsymbol{\theta} - \boldsymbol{\theta}^{'}}{|\boldsymbol{\theta} - \boldsymbol{\theta}'|}
-        d^{2}\boldsymbol{\theta}'
+        d^{2}\boldsymbol{\theta}'.
 \end{equation} 
+On note 
+au passage que l'équation de la lentille est linéaire par rapport à $\boldsymbol{\beta}$, 
+mais non-linéaire par rapport à $\boldsymbol{\theta}$. Cet aspect deviens important lorsqu'on 
+cherche à optimiser la complexité numérique de la procédure d'optimisation des paramètres de la 
+lentille. \par
 
+L'équation de la lentille introduit deux effets de distortions, soit la magnification de l'image 
+de la source et le cisaillement. Ces distortions sont décrites par la Jacobienne de 
+l'équation de la lentille
+\begin{equation}\label{eq:Jacobian} 
+        A \equiv \frac{\partial \boldsymbol{\beta}}{\partial \boldsymbol{\theta}}
+= \left( \mathbbm{1} - \frac{\partial^2 \psi}{\partial \theta_i \partial \theta_j} \right). 
+\end{equation} 
+Le cisaillement est un pseudo-vecteur $\gamma = (\gamma_1, \gamma_2)$ dans le plan de la lentille 
+qui correspond à la partie antisymétrique et sans trace de la Jacobienne:
+\begin{align}
+        \gamma_1(\boldsymbol{\theta}) &=  \frac{1}{2} \left( \psi_{11} - \psi_{22} \right); \\
+        \gamma_2(\boldsymbol{\theta}) &= \psi_{12} = \psi_{21}.
+\end{align}
+Ainsi, on peut modéliser les perturbations extérieurs au déflecteur principal de la lentille 
+via l'effet de cisaillement en introduisant le potentiel extérieur qui correspond à un 
+cisaillement constant:
+\begin{equation}\label{eq:gamma_ext} 
+        \psi_{\mathrm{ext}}  = \frac{1}{2} \gamma_{\mathrm{ext}} \theta^2 
+        \cos 2(\varphi - \phi_{\mathrm{ext}}).
+\end{equation} 
+Le potentiel extérieur est exprimé en terme des coordonnées polaires du plan de la lentille 
+$\boldsymbol{\theta} = (\theta, \varphi)$.
+
+La magnification correspond à l'inverse du déterminant de la Jacobienne. 
+\begin{equation}\label{eq:Magnification} 
+        \mu \equiv \det{A}^{-1}.
+\end{equation} 
+Cette quantité peut être utilisé pour contraindre la luminosité de noyau actif de la galaxie 
+source (AGN) via le ratio du flux des 4 images de l'AGN.
+%Les valeurs 
+%propres de la matrice de cisaillement sont $\pm \sqrt{\gamma_1^2 + \gamma_2^2 } = \pm \gamma$, 
+%ainsi il est plus pratique d'introduire le cisaillement en coordonnée polaires $(\gamma, \phi)$:
+%\begin{equation}\label{eq:JacobianDecomposition} 
+        %A = (1 - \kappa)\mathbbm{1}
+        %+ \gamma R(\phi).
+%\end{equation} 
+
+
+\subsection{Paramétrisation}
+On paramétrise la densité surfacique de la lentille avec un profil elliptique avec une loi 
+de puissance adouci:
 \begin{equation}\label{eq:Kappa} 
-        \kappa(\boldsymbol{\theta}) = \frac{3 - n}{2} 
+        \kappa(\boldsymbol{\theta}) = \frac{3 - \gamma'}{2} 
         \left( 
-        \frac{\theta_E}{\sqrt{\dfrac{\theta_1^2}{1 - e} + \theta_2^2(1 - e)}}
-\right)^{n- 1} 
+        \frac{\theta_E}{\sqrt{q\theta_1^2 + \theta_2^2/q + \theta_c^2}}
+\right)^{\gamma'- 1}. 
+\end{equation} 
+$\gamma'$ est la pente logarithmique radiale du profile, $q$ est le paramètre d'ellipticité
+et $\theta_E$ est le rayon d'Einstein de la lentille. On introduit le rayon du coeur du profile 
+$\theta_c$ pour éviter l'instabilité numérique du profile à l'origine du système de coordonnée. 
+Il est pratique de fixer sa valeur à un angle plus petit que la taille angulaire d'un 
+pixel de l'image (dans notre cas $\theta_c < 0.04''$). \par
+
+Les intégrales \ref{eq:Potentiel} et \ref{eq:DeflectionAngle} ont une solution analytique 
+seulement lorsque $\gamma'= 2$ (profil isotherme elliptique) ainsi que certains autres cas 
+détaillés par \cite{Keeton2001}. En première approximation, ce paramètre peut être fixé 
+à $2$ sachant que la plupart des systèmes de lentilles sont bien modélisé par ce profil. 
+Laisser ce paramètre complètement libre requiert de procéder avec le traitement de 
+\cite{Barkana1998}, où les intégrales dans le plan sont transformées en intégrales en une 
+dimension. \par
+
+On choisit une solution intermédiaire valide lorsque l'ellipticité de la lentille est 
+petite (voir \cite{Barkana1998}). Le profil \texttt{SPEP} suppose que la forme 
+du potentiel $\psi$ est identique à celle d'un profile isotrope (où 
+les intégrales ont des solutions analytiques). Cette approche à l'avantage d'être plus 
+rapide numériquement, au prix de développer des isocontours dans le potentiel $\psi$
+en forme d'haltères lorsque 
+l'ellipticité s'éloigne du domaine de validité.
+
+
+%On choisit une solution intermédiaire informée du fait que la pente logarithmique 
+%est très près d'une pente isotherme. Ainsi, on peut considérer une expansion de Taylor 
+%au premier ordre autour de la solution isotherme. Cette approche à l'avantage d'être à 
+%l'avantage d'être plus rapide à calculer numériquement. On doit toutefois restreindre 
+%le domaine des valeurs possibles de $\gamma'$ à l'intervalle $\[1.6, 2.4\]$ où 
+%l'erreur par rapport à la solution de Barkana 
+
+\section{Délai temporels}
+Le delai temporel est une mesure de la différence entre le temps d'arrivé d'une image $i$ 
+et une image $j$ de l'AGN. Le formalisme des délai temporels introduit par une 
+lentille gravitationnelle fut initialement introduit par \cite{Refsdal1964}. La même 
+année, \cite{Shapiro1964} introduisait l'effet de dilation temporelle expérimenté par 
+un photon traversant un champ gravitationnel. Les deux effets sont combinés dans ce 
+qu'on appel le potentiel de Fermat:
+\begin{equation}\label{eq:PotentielFermat} 
+        \Psi_{\mathrm{Fermat}} = \frac{(\boldsymbol{\theta} - \boldsymbol{\beta})^{2}}{2}
+        - \psi(\boldsymbol{\theta}).
+\end{equation} 
+Le délai entre deux images ($i$ et $j$) est donc mesuré par l'équation
+
+%Un quasar est un objet idéal pour faire la mesure d'un délai 
+%temporel en raison de la grande variabilité intrinsèque de sa luminosité 
+%et sa petite 
+%dimension physique ($\lesssim 10\mathrm{pc}$).
+
+
+
+\begin{equation}\label{eq:TimeDelay} 
+        c \Delta t_{ij} = D_{\Delta t} \left( \Psi_{\mathrm{Fermat, i}} - 
+        \Psi_{\mathrm{Fermat, j}} \right),
+\end{equation} 
+où $D_{\Delta t}$ est la distance caractéristique du délai temporel
+\begin{equation}\label{eq:Ddt} 
+        D_{\Delta t} \equiv (1 + z_{\ell}) \frac{D_\ell D_s}{D_{\ell s}} \propto H_0^{-1}.
 \end{equation} 
 \section{Méthodologie}\label{sec:metho}
+\subsection{}
+
 \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\linewidth]{good_cutout}

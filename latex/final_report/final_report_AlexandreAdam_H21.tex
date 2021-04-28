@@ -268,19 +268,56 @@ où $D_{\Delta t}$ est la distance caractéristique du délai temporel
 \begin{equation}\label{eq:Ddt} 
         D_{\Delta t} \equiv (1 + z_{\ell}) \frac{D_\ell D_s}{D_{\ell s}} \propto H_0^{-1}.
 \end{equation} 
-\section{Méthodologie}\label{sec:metho}
-\subsection{}
-
+%\section{Méthodologie}\label{sec:metho}
+%\subsection{}
+\section{Observations de RXJ1131-1231}
+La lentille gravitationnelle RXJ1131-1231 a été découverte par 
+\cite{Sluse2003}. Des mesures spectroscopiques ont permis de déterminer le 
+décalage vers le rouge de la source $z_s = 0.658$ et de la lentille 
+$z_\ell = 0.295$ (\cite{Sluse2003}). Dans les prochaines sections, on détail 
+la prise de mesure et le traitement \textit{a posteriori} des mesures pour 
+extraire les données pertinentes à l'inférence.
 \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{good_cutout}
-        \caption{}
+        \includegraphics[width=\linewidth]{good_cutout}
+        \caption{Image ACS \textit{drizzled} du système RXJ1131-1231 avec le filtre F814w obtenu 
+                à partir de l'archive du télescope \textit{Hubble}. Les 
+        4 images du quasar sont identifiés par les lettres A à D. Le déflecteur principal (G) 
+        et son satellite (S) sont aussi identifiés. Les axes sont étiqueté par le système 
+        de coordonnée céleste J2000.}
         \label{fig:rxj1131}
 \end{figure}
 
+\subsection{Traitement de l'image}
+La prise de donnée consiste en 5 expositions de 1980.0 secondes avec 
+l'instrument \texttt{ACS} du téléscope Hubble dans le filtre F814w. Ces 
+expositions sont combinés par l'algorithme \texttt{MultiDrizzle} 
+(voir \cite{Massey2010} et \cite{Koekemoer2007}) à une taille angulaire 
+par pixel de $0.04''$.
+
+Le bruit du compte d'électron dans chaque pixel
+est modélisé à partir 
+l'image de poids $w_{\mathrm{ACS}, i} = 1/\sigma^2_{\mathrm{ACS, i}}$ 
+calculé lors du processus de 
+\textit{drizzling} pour tenir compte de la corrélation du bruit de chaque pixel 
+avec ses voisins lors du rééchantillionnage de l'image dans une grille de pixels 
+effectifs.
+Ces poids tiennent compte aussi
+du fond noir du ciel, du courant noir du détecteur et des pixels saturés 
+durant l'exposition (ainsi que des masques appliqués aux rayons cosmiques 
+et traces laissées par des satellites).
 \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{psf_cutout}
+        \includegraphics[width=\linewidth]{noise_map}
+        \caption{}
+        \label{fig:}
+\end{figure}
+
+
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{psf_cutout}
         \caption{}
         \label{fig:psf}
 \end{figure}
@@ -291,7 +328,8 @@ où $D_{\Delta t}$ est la distance caractéristique du délai temporel
         \nonumber
         \log P(\underbrace{\mathbf{d}_{\mathrm{ACS}}}_{\mathcal{D}}
         | \underbrace{\theta_E, e, n, \boldsymbol{\gamma}, \mathbf{\eta}, \mathbf{s}}_{\mathcal{M}}) \propto  
-        &-\frac{1}{2}\sum_{i=1}^{|\mathcal{D}|} \frac{(d_{ACS,i} - d_{\mathcal{M}, i})^{2}}{\sigma_i^2}
+        &-\frac{1}{2}\sum_{i=1}^{|\mathcal{D}|} \frac{(d_{\mathrm{ACS},i} - d_{\mathcal{M}, i})^{2}}
+        {\sigma_{\mathrm{ACS},i}^2}
         \\
 \label{eq:Inference} 
         &-\frac{1}{2}\sum_{i < j}^{4} \frac{(\boldsymbol{\beta}_{i} - \boldsymbol{\beta}_i)^{2}}{(d\theta)^{2}}

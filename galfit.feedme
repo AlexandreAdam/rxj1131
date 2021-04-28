@@ -3,16 +3,16 @@
 # IMAGE and GALFIT CONTROL PARAMETERS
 A) data/rxj1131_cutout.fits            # Input data image (FITS file)
 B) data/blocks1.fits      # Output data image block
-C) none                # Sigma image name (made from data if blank or "none") 
+C) data/rxj1131_cutout_weights.fits   # Sigma image name (made from data if blank or "none") 
 D) data/rxj1131_psf1.fits   #        # Input PSF image and (optional) diffusion kernel
 E) 1                   # PSF fine sampling factor relative to data 
-#F) data/rxj1131_bad_pixel_map_galfit.fits                # Bad pixel mask (FITS image or ASCII coord list)
-F) none
-G) none                # File with parameter constraints (ASCII file) 
-H) 0    250   0    250   # Image region to fit (xmin xmax ymin ymax)
+F) data/rxj1131_bad_pixel_map_galfit.fits       #Bad pixel mask (FITS image or ASCII coord list)
+G) constraints.constraints                # File with parameter constraints (ASCII file) 
+#G) none
+H) 0    175   0    175   # Image region to fit (xmin xmax ymin ymax)
 I) 100    100          # Size of the convolution box (x y)
 J) 21.1              # Magnitude photometric zeropoint 
-K) 0.05  0.05        # Plate scale (dx dy)    [arcsec per pixel]
+K) 0.04  0.04        # Plate scale (dx dy)    [arcsec per pixel]
 O) regular             # Display type (regular, curses, both)
 P) 0                  # Choose: 0=optimize, 1=model, 2=imgblock, 3=subcomps
 
@@ -31,36 +31,50 @@ P) 0                  # Choose: 0=optimize, 1=model, 2=imgblock, 3=subcomps
 #   par)    par value(s)    fit toggle(s)    # parameter description 
 # -----------------------------------------------------------------------------
 
+# fit 2 sersic profiles for the main deflector
 ## Object number: 1
  0) sersic                 #  object type
- 1) 87  86    1 1          #  position x, y
- 3) 10.9000     1          #  Integrated magnitude	
- 4) 20.000      0          #  R_e (half-light radius)   [pix]
- 5) 4.00         0          #  Sersic index n (de Vaucouleurs n=4) 
- 9) 0.5000      1          #  Axis ratio
-10) -60.000      1          #  position angle (PA) [deg: Up=0, Left=90]
+ 1) 89.32  88.27    1 1          #  position x, y
+ 3) 7.060      1           #  Integrated magnitude	
+ 4) 4.000      1          #  R_e (half-light radius)   [pix]
+ 5) 0.8        1          #  Sersic index n (de Vaucouleurs n=4) 
+ 9) 0.900      1          #  Axis ratio
+10) -60.000     1          #  position angle (PA) [deg: Up=0, Left=90]
  Z) 0                      #  output option (0 = resid., 1 = Don't subtract) 
+
+
+## Object number: 2
+ 0) sersic                   object type
+ 1) 89.32  88.27    1 1          #  position x, y
+ 3) 4.6000     1            Integrated magnitude	
+ 4) 36.00      1            R_e (half-light radius)   [pix]
+ 5) 0.90        1            Sersic index n (de Vaucouleurs n=4) 
+ 9) 0.9000      1            Axis ratio
+10) -60.000     1            position angle (PA) [deg: Up=0, Left=90]
+ Z) 0                        output option (0 = resid., 1 = Don't subtract) 
 
 # Object number: small galaxy
  0) psf                 #  object type
- 1) 84  99     1 1           #  position x, y
- 3) 19.0890      1          #  Integrated magnitude	
+ 1) 87  101     1 1           #  position x, y
+ 3) 10.0890      1          #  Integrated magnitude	
  Z) 0
- #4) 1           1          #  R_e (half-light radius)   [pix]
- #5) 4.2490      1          #  Sersic index n (de Vaucouleurs n=4) 
- #6) 0.0000      0          #     ----- 
- #7) 0.0000      0          #     ----- 
- #8) 0.0000      0          #     ----- 
- #9) 0.7570      1          #  axis ratio (b/a)  
-#10) -60.3690    1          #  position angle (PA) [deg: Up=0, Left=90]
- #Z) 0                      #  output option (0 = resid., 1 = Don't subtract) 
+ #
+ # Circular Sersi profile for satellite, this is unstable R_e < plate scale
+ #0) sersic                   object type
+ #1) 87.32  101    1 1          #  position x, y
+ #3) 10.9000     1            Integrated magnitude	
+ #4) 2.00        1             R_e (half-light radius)   [pix]
+ #5) 1           0            Sersic index n (de Vaucouleurs n=4) 
+ #9) 1.000       0            Axis ratio
+#10) 0.000       0            position angle (PA) [deg: Up=0, Left=90]
+ #Z) 0                        output option (0 = resid., 1 = Don't subtract) 
 
-# Object number: 3
- 0) sky                    #  object type
- 1) 1.3920      1          #  sky background at center of fitting region [ADUs]
- 2) 0.0000      0          #  dsky/dx (sky gradient in x)
- 3) 0.0000      0          #  dsky/dy (sky gradient in y)
- Z) 0                      #  output option (0 = resid., 1 = Don't subtract) 
+# Object number: 
+ #0) sky                    #  object type
+ #1) 50.3920      1          #  sky background at center of fitting region [ADUs]
+ #2) 0.0000      0          #  dsky/dx (sky gradient in x)
+ #3) 0.0000      0          #  dsky/dy (sky gradient in y)
+ #Z) 0                      #  output option (0 = resid., 1 = Don't subtract) 
 
 ================================================================================
 

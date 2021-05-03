@@ -1,4 +1,5 @@
-# rxj1131
+# Analysis of RX J1131-1231
+## Time-delays and lens modeling to infer H_0
 
 References:  
 - *H0LiCOW XIII. A 2.4% measurement of H_0 from lensed quasars: 5.3sigma between early and late-Universe probes* arXiv:1907.04869

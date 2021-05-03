@@ -1,0 +1,14 @@
+Measured time shift after fitting the splines : 
+------------------------------------------------
+knotstep : 20
+
+Micro-lensing knml = 150     Delays are [-6.73527318e-01 -6.29544594e-01 -9.29694411e+01  4.39827247e-02
+ -9.22959138e+01 -9.23398965e+01] for pairs ['AB' 'AC' 'AD' 'BC' 'BD' 'CD']. Chi2 Red : 0.13526  DoF : 472 
+
+------------------------------------------------
+Measured time shift after fitting with regdiff : 
+
+Regdiff :      Delays are [  0.49961518   0.         -91.71617092  -0.49961518 -92.2157861
+ -91.71617092] for pairs ['AB' 'AC' 'AD' 'BC' 'BD' 'CD']
+------------------------------------------------
+Starting point used : [0.0, 0.0, -90.0, 0.0, -90.0, -90.0] for pairs ['AB' 'AC' 'AD' 'BC' 'BD' 'CD']

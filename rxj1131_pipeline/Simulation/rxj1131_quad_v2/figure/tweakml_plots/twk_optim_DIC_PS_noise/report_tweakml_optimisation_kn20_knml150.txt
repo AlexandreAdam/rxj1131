@@ -1,0 +1,53 @@
+Lightcurve A : 
+
+I succeeded in finding a set of parameters that match the statistical properties of the real lightcurve within 0.75 sigma. 
+I stopped because I found a good set of parameters. 
+Best parameters are : [0.20000000000000004] 
+A correction for PS_from_residuals : 1.20 
+Corresponding Chi2 : 0.36 
+Target zruns, sigma : -7.512471, 0.012505 
+At minimum zruns, sigma : -7.091767 +/- 0.645723, 0.013132 +/- 0.001013 
+For minimum Chi2, we are standing at 0.6515248098450115 sigma [zruns] 
+For minimum Chi2, we are standing at 0.6187803728722284 sigma [sigma] 
+------------------------------------------------
+
+Lightcurve B : 
+
+I succeeded in finding a set of parameters that match the statistical properties of the real lightcurve within 0.75 sigma. 
+I stopped because I found a good set of parameters. 
+Best parameters are : [0.30312500000000003] 
+A correction for PS_from_residuals : 1.03 
+Corresponding Chi2 : 0.36 
+Target zruns, sigma : -6.501901, 0.016834 
+At minimum zruns, sigma : -6.129508 +/- 0.813737, 0.017428 +/- 0.001123 
+For minimum Chi2, we are standing at 0.45763308106464473 sigma [zruns] 
+For minimum Chi2, we are standing at 0.5297197620391804 sigma [sigma] 
+------------------------------------------------
+
+Lightcurve C : 
+
+I succeeded in finding a set of parameters that match the statistical properties of the real lightcurve within 0.75 sigma. 
+I stopped because I found a good set of parameters. 
+Best parameters are : [0.51875] 
+A correction for PS_from_residuals : 0.99 
+Corresponding Chi2 : 0.36 
+Target zruns, sigma : -3.113175, 0.028661 
+At minimum zruns, sigma : -3.101816 +/- 1.051877, 0.029069 +/- 0.001440 
+For minimum Chi2, we are standing at 0.010799448803477866 sigma [zruns] 
+For minimum Chi2, we are standing at 0.2834564179460614 sigma [sigma] 
+------------------------------------------------
+
+Lightcurve D : 
+
+I succeeded in finding a set of parameters that match the statistical properties of the real lightcurve within 0.75 sigma. 
+I stopped because I found a good set of parameters. 
+Best parameters are : [0.75] 
+A correction for PS_from_residuals : 1.03 
+Corresponding Chi2 : 0.36 
+Target zruns, sigma : -2.123626, 0.030914 
+At minimum zruns, sigma : -2.324268 +/- 0.787883, 0.030925 +/- 0.001892 
+For minimum Chi2, we are standing at 0.2546594120927769 sigma [zruns] 
+For minimum Chi2, we are standing at 0.006053268514631977 sigma [sigma] 
+------------------------------------------------
+
+Optimisation done in 408.0217 seconds on 32 cores

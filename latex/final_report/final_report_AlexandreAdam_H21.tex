@@ -120,7 +120,7 @@ Département de physique \\ Université de Montréal
 \twocolumn[
 \maketitle
 \begin{onecolabstract} % 10 points
-L'étude multi-domaines du quasar quadruplement RXJ1131-1231 permet 
+L'étude multi-domaines du quasar quadruplement lentillé RXJ1131-1231 permet 
 de déterminer la constante de Hubble à partir du formalisme de la cosmographie et 
 des délais temporels. Dans cette étude, on analyse les données provenant du télescope 
 de Hubble avec l'instrument ACS dans le filtre F814w pour estimer la distribution de masse 
@@ -133,8 +133,8 @@ $H_0 = 91.07^{+5.56}_{-5.26}$, soit une précision de 6\%.
 
 \section{Introduction}\label{sec:intro}
 
-La mesure du taux d'expansion de l'Univers $H_0$ nommé en l'honneur 
-d'Edwin Hubble pour sa découverte (\citet{Hubble1929}) est un projet 
+La mesure du taux d'expansion de l'Univers $H_0$, nommé en l'honneur 
+d'Edwin Hubble pour sa découverte (\citet{Hubble1929}), est un projet 
 central à la cosmologie moderne. En effet, cette quantité nous informe 
 autant sur la taille de l'Univers que sur l'abondance des éléments 
 dans l'Univers primordial.
@@ -148,7 +148,7 @@ voir moins dans le cas de la \citet{PlanckCollaboration2018}.
 Les mesures faites dans l'Univers local (relation période-luminosité 
 des Céphéides, luminosité de supernov\ae de type Ia et cosmographie à 
 partir de lentilles gravitationnelles) sont en tension de façon 
-significative $\sim 5\sigma$ avec les mesures faites 
+significative ($\sim 5\sigma$) avec les mesures faites 
 dans l'univers jeune avec le fond diffus cosmologique (CMB). Cette 
 crise de la cosmologie moderne est sujet de plusieurs spéculations et 
 hypothèses sur la nature de cette tension. Ceci motive la recherche pour 
@@ -160,27 +160,27 @@ source-lentille pour déterminer l'échelle physique du système et la masse con
 dans la lentille. 
 On s'intéresse en particulier 
 au système RXJ1131-1231 qui fait partit de l'ensemble 
-des lentilles utilisés pour faire la détermination de \citet{Wong2020}. 
+des lentilles utilisés par l'étude de \citet{Wong2020}. 
 Cette lentille est intéressante car elle ajoute un biais statistique sur $H_0$ 
-dû la valeur de la constante de Hubble qui est généralement 
+dû la valeur de la constante de Hubble inférée de ce système qui est généralement 
 élevé par rapport à l'estimé de la moyenne 
 statistique d'une population de lentilles 
 (voir \citet{Suyu2013}, \citet{Birrer2016}).
 
 Notre étude se concentre sur la détermination des potentiels de Fermat 
 via la modélisation de la lentille et de la source avec les données provenant du 
-télescope Hubble. Les délais temporels sont déterminé indépendamment par 
+télescope Hubble. Les délais temporels sont déterminés indépendamment par 
 Charles Wilson à partir 
 des données photométriques collectées par la collaboration \textsc{CosmoGrail} 
 (\citet{Tewes2013}).
 
-Les sectiones \ref{sec:lens} et \ref{sec:delay} se concentre sur la 
+Les sections \ref{sec:lens} et \ref{sec:delay} se concentrent sur la 
 théorie des lentilles gravitationnelles pour établir le formalisme 
 qui nous permet de mesurer $H_0$. Ensuite, on discute des données 
 prisent par le télescope Hubble du système RXJ1131-1231 et de la réductions 
-des données \textit{a posteriori} à la section \ref{sec:observation} 
+des données \textit{a posteriori} dans la section \ref{sec:observation} 
 pour faire l'inférence des paramètres 
-qu'on introduit à la section \ref{sec:inference}.
+qu'on introduit dans la section \ref{sec:inference}.
 Finalement, les résultats finaux sont présentés et discuté à la section 
 \ref{sec:resultats}.
 
@@ -213,7 +213,7 @@ Finalement, les résultats finaux sont présentés et discuté à la section
 Dans cette section, on révise la théorie des lentilles gravitationnelles. 
 Plus de détails peuvent être trouvés dans l'excellente revue de \citet{Treu2010}. \par
 
-Une distribution de matière projeté sur le plan normal à la ligne de visée d'un 
+Une distribution de matière projetée sur le plan normal à la ligne de visée d'un 
 observateur forme ce qu'on 
 appel un champ de convergence $\kappa(\boldsymbol{\theta})$, où $\boldsymbol{\theta}$ sont 
 les coordonnées angulaires du plan de la lentille. Ce champ génère un potentiel 
@@ -253,7 +253,7 @@ $\boldsymbol{\alpha}(\boldsymbol{\theta}) = \grad_{\boldsymbol{\theta}} \psi$, a
 \end{equation} 
 On note 
 au passage que l'équation de la lentille est linéaire par rapport à $\boldsymbol{\beta}$, 
-mais non-linéaire par rapport à $\boldsymbol{\theta}$. Cet aspect deviens important lorsqu'on 
+mais non-linéaire par rapport à $\boldsymbol{\theta}$. Cet aspect devient important lorsqu'on 
 cherche à optimiser la complexité numérique de la procédure d'optimisation des paramètres de la 
 lentille. \par
 
@@ -271,7 +271,7 @@ qui correspond à la partie antisymétrique et sans trace de la Jacobienne:
         \gamma_2(\boldsymbol{\theta}) &= \psi_{12} = \psi_{21}.
 \end{align}
 Ainsi, on peut modéliser les perturbations extrinsèques au déflecteur principal de la lentille 
-via l'effet de cisaillement en introduisant le potentiel extrinsèques qui correspond à un 
+en introduisant le potentiel extrinsèques qui correspond à un 
 cisaillement constant:
 \begin{equation}\label{eq:gamma_ext} 
         \psi_{\mathrm{ext}}  = \frac{1}{2} \gamma_{\mathrm{ext}} \theta^2 
@@ -280,12 +280,12 @@ cisaillement constant:
 $\psi_{\mathrm{ext}}$ est exprimé en terme des coordonnées polaires du plan de la lentille 
 $\boldsymbol{\theta} = (\theta, \varphi)$.
 
-La magnification correspond à l'inverse du déterminant de la Jacobienne. 
-\begin{equation}\label{eq:Magnification} 
-        \mu \equiv \det{A}^{-1}.
-\end{equation} 
-Cette quantité peut être utilisé pour contraindre la luminosité de noyau actif de la galaxie 
-source (AGN) via le ratio du flux des 4 images de l'AGN.
+%La magnification correspond à l'inverse du déterminant de la Jacobienne. 
+%\begin{equation}\label{eq:Magnification} 
+        %\mu \equiv \det{A}^{-1}.
+%\end{equation} 
+%Cette quantité peut être utilisé pour contraindre la luminosité de noyau actif de la galaxie 
+%source (AGN) via le ratio du flux des 4 images de l'AGN. Dans notre cas, 
 %Les valeurs 
 %propres de la matrice de cisaillement sont $\pm \sqrt{\gamma_1^2 + \gamma_2^2 } = \pm \gamma$, 
 %ainsi il est plus pratique d'introduire le cisaillement en coordonnée polaires $(\gamma, \phi)$:
@@ -305,7 +305,8 @@ de puissance adoucie:
 \right)^{\gamma'- 1}. 
 \end{equation} 
 $\gamma'$ est la pente logarithmique radiale du profile, $q$ est le ratio des axes 
-et $\theta_E$ est le rayon d'Einstein de la lentille. On introduit le rayon du coeur du profile 
+et $\theta_E$ est le rayon d'Einstein de la lentille. On introduit le rayon du c{\oe}ur 
+du profile 
 $\theta_c$ pour éviter l'instabilité numérique du profile à l'origine du système de coordonnée. 
 Il est pratique de fixer sa valeur à un angle plus petit que la taille angulaire d'un 
 pixel de l'image (dans notre cas $\theta_c < 0.04''$). \par
@@ -325,10 +326,11 @@ sont simplifiées en intégrales unidimensionnelles. \par
 On choisit une solution intermédiaire valide lorsque l'ellipticité de la lentille est 
 petite (voir \citet{Barkana1998}). Le profil \texttt{SPEP} suppose que la forme 
 du potentiel $\psi$ est identique à celle d'un profile isotrope (où 
-les intégrales ont des solutions analytiques). Cette approche à l'avantage d'être plus 
-rapide numériquement, au prix de développer des isocontours dans le potentiel $\psi$
+les intégrales ont des solutions analytiques). Les angles de déflections 
+ont ainsi une forme analytique. Cette simplifications vient 
+au prix de développer des isocontours dans le potentiel $\psi$
 en forme d'haltères lorsque 
-l'ellipticité s'éloigne du domaine de validité.
+l'ellipticité du profil de masse s'éloigne du domaine de validité.
 
 Le cisaillement extrinsèque est aussi ajusté lors de l'étape d'inférence. Le centre 
 du champ de distortions est fixé au centre de l'image \texttt{ACS}, ce qui laisse 
@@ -345,7 +347,7 @@ les paramètres $\gamma_{\mathrm{ext}}$ et $\phi_{\mathrm{ext}}$ de l'équation
 
 \section{Délai temporel}\label{sec:delay}
 Le delai temporel est une mesure de la différence entre le temps d'arrivé d'une image $i$ 
-et une image $j$ de l'AGN. Le formalisme des délai temporels introduit par une 
+et une seconde image $j$ de l'AGN. Le formalisme des délai temporels d'une 
 lentille gravitationnelle fut initialement introduit par \citet{Refsdal1964}. La même 
 année, \citet{Shapiro1964} introduisait l'effet de dilation temporelle expérimenté par 
 un photon traversant un champ gravitationnel. Les deux effets sont combinés pour 
@@ -377,6 +379,7 @@ masse extrinsèque au plan
 de la lentille $\kappa_{\mathrm{ext}}$ 
 permet de lever cette dégénérescence.
 
+Pour déterminer directement les délais temporels $\Delta t_{ij}$, 
 \citet{Tewes2013} ont mesuré le flux photométrique des 4 images du quasar à 
 tous les 4-5 jours en moyenne durant 9 ans avec 3 télescopes terrestres de 
 1-2 mètres d'ouverture. Comme ces courbes de lumières sont générées par un même objet (AGN), 
@@ -385,7 +388,7 @@ sortes que les délais temporels propre à la lentille peuvent être mesurés in
 
 Pour notre analyse, on utilise les résultats obtenu par Charles Wilson avec le 
 module \texttt{Pycs3} (\citet{Millon2020}). On réfère à son rapport pour une explication 
-plus détaillée de la méthode employée.
+plus détaillée de la méthode employée et des sources possibles d'erreurs.
 
 \begin{table}[H]
         \centering
@@ -425,7 +428,7 @@ l'instrument \texttt{ACS} du téléscope Hubble et le filtre F814w. Ces
 expositions sont combinées par l'algorithme \texttt{MultiDrizzle} 
 (voir \citet{Massey2010} et \citet{Koekemoer2007}) à une taille angulaire 
 par pixel de $0.04''$. L'image de RXJ1131-1231 (figure \ref{fig:rxj1131}) 
-est une découpe de 175 pixels de côté centré autour de la position 
+est une découpe de 175 pixels de côté centré sur la position 
 J2000: $11^{\mathrm{h}}31^{\mathrm{m}}51.45^{\mathrm{s}}$, $-12^{\circ}31'58.28''$.
 
 \begin{table}[H]
@@ -454,7 +457,7 @@ avec ses voisins (voir par exemple \citet{Casertano2000}).
 %La corrélation émerge 
 %lors du rééchantillionnage de l dans une grille de pixels 
 %effectifs.
-Ces poids tiennent compte 
+Ces poids tiennent aussi compte  
 du fond noir du ciel, du courant noir du détecteur et des pixels saturés 
 durant l'exposition (ainsi que des masques appliqués aux rayons cosmiques 
 et traces laissées par des satellites).
@@ -467,7 +470,7 @@ l'image ACS et des poids
 La lumière des galaxies G et S est décomposé de l'image ACS pour 
 isoler le système lentillé. Pour ce faire, on utilise le 
 logiciel \texttt{GalFit} (\citet{Peng2002,Peng2010}). On trouve que la 
-galaxie G est bien modélisé par deux profils de Sérsic élliptique (\citet{Sersic1968}):
+galaxie G est bien modélisé par deux profils de Sérsic elliptique (\citet{Sersic1968}):
 \begin{equation}\label{eq:} 
         \Sigma(\theta_1, \theta_2) = \Sigma_e \exp \left\{ -\kappa 
 \left[  
@@ -483,12 +486,40 @@ $R_e$ est le rayon effectif du profil.
 Cette procédure est commune 
 (voir par exemple \citet{Suyu2013})
 pour une galaxie elliptique 
-avec bulbe \textit{classique}, modélisée par 
+avec un bulbe \textit{classique}, modélisée par 
 un profil de de Vaucouleurs ($n=4$, \citet{DeVaucouleurs1948}).
 Similairement, un disque \textit{classique} est modélisé par 
 un profil exponentiel ($n=1$). La taille du satellite S est suffisamment petite 
 qu'on choisit d'utiliser la fonction d'étalement du point (PSF) pour la 
 modéliser.
+
+
+
+
+La fonction d'étalement du point est extraite des objets non-résolus dans le
+champ d'étoile 
+avoisinant ($\simeq 2'$) au système RXJ1131-1231. 
+On identifie 3 candidats potentiels (voir figure \ref{fig:psf}). 
+Le candidat numéro 1 contient un anneau secondaire 
+typique d'une tache d'Airy et est donc choisit pour les analyses subséquentes. 
+On extrait une image de 39 pixels de côté centré sur la position de l'objet 1, 
+qu'on normalize 
+après avoir 
+multiplié par une fenêtre de Hann (aussi connue comme \textit{Hanning window})
+pour mitiger les effets de bord du découpage.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{psf_cutout}
+        \caption{ Sélection d'une PSF pour la reconstruction d'image dans le champs 
+                d'étoile avoisinant le système RXJ1131-1231 (visible au centre 
+                de l'image). Le candidat 1 (coin sud-est de l'image) contient 
+                un anneau secondaire typique d'une tache d'Airy.
+        }
+        \label{fig:psf}
+\end{figure}
+
+
 \begin{figure*}[ht]
         \centering
         \begin{subfigure}[b]{0.45\linewidth}
@@ -509,31 +540,6 @@ modéliser.
         \end{subfigure}
         \caption{Prétraitement de l'image et modélisation du bruit.}
 \end{figure*}
-
-
-
-
-La fonction d'étalement du point est extraite des objets non-résolus dans le
-champ d'étoile 
-avoisinant ($\simeq 2'$) au système RXJ1131-1231. 
-On identifie 3 candidats potentiels (voir figure \ref{fig:psf}). 
-Le candiat numéro 1 exhibite un anneau secondaire 
-typique d'une tache d'Airy et est donc choisit pour les analyses subséquentes. 
-On extrait une image de 39 pixels de côté centré autour de l'objet 1, qu'on normalize 
-après avoir 
-multiplié par une fenêtre de Hann (aussi connue comme \textit{Hanning window})
-pour mitiger les effets de bord du découpage.
-
-\begin{figure}[H]
-        \centering
-        \includegraphics[width=\linewidth]{psf_cutout}
-        \caption{ Sélection d'une PSF pour la reconstruction d'image dans le champs 
-                d'étoile avoisisnant le système RXJ1131-1231 (visible au centre 
-                de l'image). Le candidat 1 (coin sud-est de l'image) exhibite 
-                un anneau secondaire typique d'une tache d'Airy.
-        }
-        \label{fig:psf}
-\end{figure}
 %Les délai temporels sont donc déterminé via la translation temporelle de ces courbes 
 %tels que ces sursauts correspondent un à l'autre, donné un
 %%La procédure de maximisation de la vraisemblance de la translation temporelle de ces 
@@ -554,7 +560,7 @@ et un ajustement aux observations.
 %le cône de visée entre l'observateur et la source. Voir par exemple 
 %\cite{Birrer2016}. 
 
-Cette observation, combinée a un compte statistique 
+Cette observation, combinée à un compte statistique 
 des galaxies avoisinant le système lentillé (\citet{Fassnacht2011}), permet d'estimer 
 la convergence extrinsèque au plan de la lentille. On estime ses trois premiers 
 moments à partir des résultats de \citet{Suyu2013} (figure 6 de l'article), 
@@ -567,8 +573,7 @@ Pour l'inférence des paramètres de la lentille, de la source et
 de la distance caractéristique du délai temporel, on choisit d'utiliser 
 le module \textit{open-source} \texttt{Lenstronomy} (\cite{Birrer2018}). Dans 
 la section suivante, on résume la théorie de probabilité sur laquelle 
-la modélisation est basée, les stratégies de modélisations employées et 
-les résultats intermédiaires de l'inférence jointe.
+la modélisation est basée ainsi que la forme des termes de vraisemblances.
 
 \subsection{Inférence jointe}
 L'inférence jointe des paramètres du modèle de la lentille $\mathcal{M}$, 
@@ -611,7 +616,7 @@ de converger au maximum absolu.
 On note que le choix du point de départ 
 pour les paramètres a pour 
 effet de régulariser indirectement 
-(ajout d'une distribution \textit{a priori} sur les paramètres) 
+%(ajout d'une distribution \textit{a priori} sur les paramètres) 
 la distribution \textit{a posteriori}. Le choix final est 
 rapporté dans la table \ref{tab:results}.
 
@@ -623,9 +628,9 @@ elle requiert beaucoup plus d'évaluation des vraisemblances pour
 explorer tout le volume de la distribution \textit{a priori} pour estimer 
 l'évidence $\mathcal{Z}$. 
 
-Une fois le maximum trouvé, l'algorithme MCMC est executé 
+Une fois le maximum trouvé, l'algorithme MCMC est idéalement exécuté 
 pour un nombre d'itérations suffisamment élevé pour permettre aux 
-marcheurs aléatoires d'atteindre un état ergodique. Cette analyse requiert en principe 
+marcheurs aléatoires d'atteindre un état ergodique. Cette analyse requiert 
 un estimé du temps d'autocorrélations des chaînes pour chaque paramètres 
 (\cite{Goodman2010}). On rapporte cette valeur seulement 
 pour $D_{\Delta t}$ dans la 
@@ -736,7 +741,7 @@ l'équation \eqref{eq:TimeDelay} et des résultats de la table
 \end{align}
 
 \section{Résultats et discussion}\label{sec:resultats}
-Les contraintes estimées lors de l'estimate MCMC des distribution 
+Les contraintes estimées lors de l'estimation MCMC des distributions 
 \textit{a posteriori} ou durant l'optimisation avec \texttt{GalFit} 
 sont présentés dans la table \ref{tab:results}. On ne présente que 
 les résultats lié à géographie de la lentille. Pour une 
@@ -744,8 +749,8 @@ analyse de la photométrie du système, le lecteur peut se référer au
 travail de \citet{Suyu2013} et \citet{Tewes2013}.
 
 Pour ce travail, on utilise un point de référence différent de celui utilisé 
-par \citet{Suyu2013}, ainsi les paramètres comparés dans la table \ref{tab:results} 
-sont seulement ceux qui ne dépendent pas du système de coordonnée.
+par \citet{Suyu2013}. Les paramètres comparés dans la table \ref{tab:results} 
+sont seulement ceux qui ne dépendent pas du système de coordonnées.
 
 On doit noter la valeur du rayon d'Einstein qui diffère largement de celle 
 reporté par \citet{Suyu2013}. En principe, ce paramètre est assez indépendant 
@@ -799,7 +804,7 @@ de chaînes MCMC qui n'ont pas atteint l'état ergodique.}
 On approxime la distribution postérieur de $D_{\Delta}^{\text{modèle}}$ par 
 ses trois premiers moments pour estimer 
 $D_{\Delta t}$ par l'équation \eqref{eq:Degenerescence}. C'est-à-dire qu'on pèse les 
-échantillons MCMC de $D_{\Delta t}^{\text{modèle}}$ et les échantillions simulés 
+échantillons MCMC de $D_{\Delta t}^{\text{modèle}}$ et les échantillons simulés 
 de $\kappa_{\mathrm{ext}}$ par 
 le produit de leur distribution respective (Pearson type III). Les 
 paramètres cosmologiques $\Omega_m$ et $\Omega_\Lambda$ utilisés 
@@ -855,20 +860,20 @@ représenté par
 l'asymétrie positive de la distribution 
 marginalisée de $H_0$ (figure \ref{fig:H0}). 
 
-On formule notre hypothèse sur la nature de ce biais en suivant l'analyse poussé de 
+On formule notre hypothèse sur la nature de ce biais en suivant l'analyse de 
 \citet{Birrer2016} sur la dégénérescence de masse et l'importance de la modélisation 
 de la cinématique stellaire. Les auteurs estiment que la distribution \textit{a priori} 
 sur les paramètres du profil de \citet{Hernquist1990} est responsable d'environ 
 7.5\% du budget d'erreur sur $H_0$, soit environ la taille du biais que nous observons 
 entre la valeur déterminée par cette étude et la valeur rapportée par 
-\citet{Suyu2013}.
+\citet{Suyu2013}. 
 
 Notre estimé de la constante de Hubble $91.07^{+5.54}_{-5.26}$ (figure \ref{fig:H0})
 atteint une précision de $6\%$ similaire à celle rapportée 
 par \citet{Suyu2013}, soit $4.0\%$ pour leur estimé avec un univers $\Lambda$CDM. Puisqu'on 
 fait des hypothèses simplificatrices pour le modèle du champ de convergence et le 
 modèle de la source, on s'attend à ce que notre estimé de l'incertitude soit 
-plus grand que celui rapporté par \citet{Suyu2013}. Il est très probable 
+plus grande que celle rapportée par \citet{Suyu2013}. Il est très probable 
 que notre étude surestime la précision puisque la vraisemblance modélisant la cinématique 
 stellaire n'est pas prise en compte durant l'inférence des paramètres.
 
